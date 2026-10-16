@@ -2,17 +2,26 @@
   "name": "playwright-web-ts",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
-  "keywords": [],
+  "scripts": {
+    "postinstall": "playwright install",
+    "test": "playwright test",
+    "test:chromium": "playwright test --project=chromium",
+    "test:firefox": "playwright test --project=firefox",
+    "test:webkit": "playwright test --project=webkit",
+    "test:chrome": "playwright test --project=\"Google Chrome\"",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "report": "playwright show-report",
+    "codegen": "playwright codegen https://tutorials.blassacademy.com"
+  },
+  "keywords": ["playwright", "testing", "e2e", "automation", "typescript"],
   "author": "Hernan",
   "license": "ISC",
-  "description": "",
+  "description": "Automatización E2E con Playwright + TypeScript para Blass Academy Tutorials",
   "devDependencies": {
     "@playwright/test": "^1.59.1",
     "@types/node": "^25.9.8",
-    "typescript": "^7.0.2",
-    "postinstall": "playwright install"
+    "typescript": "^7.0.2"
   }
-
-  
 }
